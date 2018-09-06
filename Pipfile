@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyppeteer = "*"
+"delegator.py" = "*"
+python-box = "*"
+requests = "*"
+"beautifulsoup4" = "*"
+raven = "*"
+logbook = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
