@@ -68,7 +68,11 @@ def isConnected():
     if r.status_code != 200:
         return False
     soup = BeautifulSoup(r.text, 'html.parser')
-    return soup.title.string == 'Success' and soup.body.string == 'Success'
+    if soup.title is not None and soup.body is not None:
+        return soup.title.string == 'Success' and soup.body.string == 'Success'
+    else:
+        sleep(2)
+        return isConnected()
     # browser = await launch()
     # page = await browser.newPage()
     # try:
